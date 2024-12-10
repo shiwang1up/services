@@ -8,6 +8,7 @@ import HomeScreen from './HomeScreen';
 import CategoriesScreen from './CategoriesScreen ';
 import ACServicesScreen from './ACServicesScreen';
 import ACRegularServicesScreen from './ACRegularServicesScreen';
+import ProfileScreen from './ProfileScreen';
 
 const Stack = createStackNavigator();
 
@@ -38,6 +39,7 @@ const App = () => {
         <Stack.Screen name="CategoriesScreen" component={CategoriesScreen} />
         <Stack.Screen name="ACServicesScreen" component={ACServicesScreen} />
         <Stack.Screen name="ACRegularServices" component={ACRegularServicesScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

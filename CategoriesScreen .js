@@ -23,6 +23,11 @@ const categories = [
 const CategoriesScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
+      <TouchableOpacity
+        style={styles.backButton}
+        onPress={() => navigation.goBack()}>
+        <Text style={styles.backButtonText}>Back</Text>
+      </TouchableOpacity>
       <Text style={styles.title}>Categories</Text>
       <FlatList
         data={categories}
@@ -47,11 +52,11 @@ const CategoriesScreen = ({navigation}) => {
         )}
         contentContainerStyle={styles.grid}
       />
-      <TouchableOpacity
+      {/* <TouchableOpacity
         style={styles.backButton}
         onPress={() => navigation.goBack()}>
         <Text style={styles.backButtonText}>Back</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 };
@@ -61,6 +66,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     padding: 16,
+  },
+  backButton: {
+    marginBottom: 16,
+  },
+  backButtonText: {
+    color: '#0056F7',
+    fontSize: 16,
   },
   title: {
     fontSize: 18,
@@ -92,18 +104,18 @@ const styles = StyleSheet.create({
     color: '#555',
     textAlign: 'center',
   },
-  backButton: {
-    marginTop: 16,
-    alignItems: 'center',
-    padding: 10,
-    backgroundColor: '#0056F7',
-    borderRadius: 8,
-  },
-  backButtonText: {
-    color: '#FFF',
-    fontSize: 14,
-    fontWeight: '600',
-  },
+  // backButton: {
+  //   marginTop: 16,
+  //   alignItems: 'center',
+  //   padding: 10,
+  //   backgroundColor: '#0056F7',
+  //   borderRadius: 8,
+  // },
+  // backButtonText: {
+  //   color: '#FFF',
+  //   fontSize: 14,
+  //   fontWeight: '600',
+  // },
 });
 
 export default CategoriesScreen;

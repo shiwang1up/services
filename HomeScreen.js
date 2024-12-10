@@ -69,7 +69,7 @@ const HomeScreen = () => {
       {/* Search Bar */}
       <View style={styles.searchBox}>
         <View style={styles.menu}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
             <Icon name="menu" size={24} color="#000" />
           </TouchableOpacity>
         </View>
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
   },
   subGreeting: {
     fontSize: 18,
-    color: '#858585',
+    color: '#637382',
     fontWeight: '600',
   },
   searchContainer: {
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
     paddingHorizontal: 6,
     borderRadius: 20,
-    backgroundColor: '#FF0000',
+    backgroundColor: '#ff5958',
     position: 'absolute',
   },
   cardImage: {
