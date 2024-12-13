@@ -14,13 +14,13 @@ const LoginScreen = ({navigation}) => {
   const isButtonDisabled = phoneNumber.length !== 10;
 
   const handleLogin = () => {
-    navigation.replace('Home'); // Navigate to Home screen
+    navigation.navigate('MainApp'); // Navigate to the Home tab and ensure HomeScreen is shown
   };
 
   return (
     <View style={styles.container}>
       <Image 
-        source={require('./assets/logo_login.png')} // Replace with your logo URI
+        source={require('../assets/logo_login.png')} // Replace with your logo URI
         style={styles.logo}
       />
       {/* <Text style={styles.title}>mHome Services</Text> */}

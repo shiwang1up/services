@@ -22,13 +22,13 @@ const cleaningServices = [
     id: 1,
     name: 'Home Cleaning',
     discount: '10% OFF',
-    image: require('./assets/home_cleaning.png'),
+    image: require('../assets/home_cleaning.png'),
   },
   {
     id: 2,
     name: 'Carpet Cleaning',
     discount: '15% OFF',
-    image: require('./assets/carpet_cleaning.png'),
+    image: require('../assets/carpet_cleaning.png'),
   },
 ];
 
@@ -37,19 +37,19 @@ const specialOffers = [
     id: 1,
     name: 'Home Painting',
     offer: '30% offer',
-    image: require('./assets/home_painting.jpg'),
+    image: require('../assets/home_painting.jpg'),
   },
   {
     id: 2,
     name: 'AC Service',
     offer: '15% offer',
-    image: require('./assets/ac_service.jpg'),
+    image: require('../assets/ac_service.jpg'),
   },
   {
     id: 3,
     name: 'Home Painting',
     offer: '20% offer',
-    image: require('./assets/home_painting.jpg'),
+    image: require('../assets/home_painting.jpg'),
   },
 ];
 
@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
   seeAllText: {
     fontSize: 14,
     color: '#283891',
-    fontWeight:'600'
+    fontWeight:'600',
   },
   categories: {
     flexDirection: 'row',

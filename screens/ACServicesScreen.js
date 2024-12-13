@@ -13,25 +13,25 @@ const acServices = [
     id: 1,
     name: 'AC Regular Service',
     price: '₹599 onwards',
-    image: require('./assets/ac_service/ac_regular_service.jpg'),
+    image: require('../assets/ac_service/ac_regular_service.jpg'),
   },
   {
     id: 2,
     name: 'AC Installation',
     price: '₹499 onwards',
-    image: require('./assets/ac_service/ac_installation.jpg'),
+    image: require('../assets/ac_service/ac_installation.jpg'),
   },
   {
     id: 3,
     name: 'AC Repair',
     price: '₹499 onwards',
-    image: require('./assets/ac_service/ac_repair.jpg'),
+    image: require('../assets/ac_service/ac_repair.jpg'),
   },
   {
     id: 4,
     name: 'AC Uninstallation',
     price: '₹59 onwards',
-    image: require('./assets/ac_service/ac_uninstallation.jpg'),
+    image: require('../assets/ac_service/ac_uninstallation.jpg'),
   },
 ];
 

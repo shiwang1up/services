@@ -13,25 +13,25 @@ const regularServices = [
     id: 1,
     name: 'Filter Cleaning',
     price: '₹199',
-    image: require('./assets/ac_service/ac_regular_service.jpg'),
+    image: require('../assets/ac_service/ac_regular_service.jpg'),
   },
   {
     id: 2,
     name: 'Gas Refilling',
     price: '₹399',
-    image: require('./assets/ac_service/ac_installation.jpg'),
+    image: require('../assets/ac_service/ac_installation.jpg'),
   },
   {
     id: 3,
     name: 'Coil Cleaning',
     price: '₹299',
-    image: require('./assets/ac_service/ac_repair.jpg'),
+    image: require('../assets/ac_service/ac_repair.jpg'),
   },
   {
     id: 4,
     name: 'Full Servicing',
     price: '₹499',
-    image: require('./assets/ac_service/ac_uninstallation.jpg'),
+    image: require('../assets/ac_service/ac_uninstallation.jpg'),
   },
 ];
 
@@ -48,7 +48,7 @@ const ACRegularServicesScreen = ({navigation}) => {
   };
 
   const handleProceed = () => {
-    console.log('Selected Services:', selectedServices);
+    navigation.navigate('ServiceDetails');
     // Add your "Proceed" button functionality here
   };
 

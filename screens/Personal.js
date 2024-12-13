@@ -11,45 +11,49 @@ import {
 const acServices = [
   {
     id: 1,
-    name: 'AC Regular Service',
+    name: 'Facial for glow',
     price: '₹599 onwards',
-    image: require('./assets/ac_service/ac_regular_service.jpg'), // Add your image here
+    image: require('../assets/personal/facial.png'),
   },
   {
     id: 2,
-    name: 'AC Installation',
+    name: 'Manicure',
     price: '₹499 onwards',
-    image: require('./assets/ac_service/ac_installation.jpg'), // Add your image here
+    image: require('../assets/personal/manicure.png'),
   },
   {
     id: 3,
-    name: 'AC Repair',
+    name: 'Pedicure',
     price: '₹499 onwards',
-    image: require('./assets/ac_service/ac_repair.jpg'), // Add your image here
+    image: require('../assets/personal/pedicure.png'),
   },
   {
     id: 4,
-    name: 'AC Uninstallation',
+    name: 'Threading',
     price: '₹59 onwards',
-    image: require('./assets/ac_service/ac_uninstallation.jpg'), // Add your image here
+    image: require('../assets/personal/threading.png'),
   },
 ];
 
-const ACServicesScreen = ({navigation}) => {
+const Personal = ({navigation}) => {
+  const handleServicePress = service => {
+    if (service.id === 0) {
+      navigation.navigate('ACRegularServices'); // Navigate to the ACRegularServicesScreen
+    }
+    // Handle navigation for other services if needed
+  };
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.backButton}
-        onPress={() => navigation.goBack()}>
-        <Text style={styles.backButtonText}>Back</Text>
-      </TouchableOpacity>
-      <Text style={styles.title}>AC Services</Text>
+      <Text style={styles.title}>Salon for Women</Text>
       <FlatList
         data={acServices}
         keyExtractor={item => item.id.toString()}
         numColumns={2}
         renderItem={({item}) => (
-          <View style={styles.serviceCard}>
+          <TouchableOpacity
+            style={styles.serviceCard}
+            onPress={() => handleServicePress(item)}>
             <View style={styles.serviceItem}>
               <Image source={item.image} style={styles.serviceImage} />
             </View>
@@ -57,7 +61,7 @@ const ACServicesScreen = ({navigation}) => {
               <Text style={styles.serviceName}>{item.name}</Text>
               <Text style={styles.servicePrice}>{item.price}</Text>
             </View>
-          </View>
+          </TouchableOpacity>
         )}
         contentContainerStyle={styles.list}
       />
@@ -86,20 +90,22 @@ const styles = StyleSheet.create({
   },
   list: {
     justifyContent: 'center',
+    
   },
-  serviceItem: {
-    flex: 1,
-    alignItems: 'center',
-  },
-  serviceCard:{
+  serviceCard: {
     flex: 1,
     margin: 8,
     alignItems: 'left',
     backgroundColor: '#F9F9F9',
-    borderRadius: 8,
+    borderRadius: 12,
     padding: 8,
     borderWidth: 1,
     borderColor: '#CCCCCC',
+    paddingBottom:20,
+
+  },
+  serviceItem: {
+    alignItems: 'center',
   },
   serviceImage: {
     width: 160,
@@ -110,17 +116,19 @@ const styles = StyleSheet.create({
   serviceTextBinder: {
     flex: 0,
     textAlign: 'left',
+    marginLeft:10,
   },
   serviceName: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '500',
     marginBottom: 4,
+    marginTop:4,
   },
   servicePrice: {
-    fontSize: 12,
+    fontSize: 13,
     color: '#283891',
     fontWeight: '600',
   },
 });
 
-export default ACServicesScreen;
+export default Personal;

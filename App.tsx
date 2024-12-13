@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import SplashScreen from './SplashScreen';
-import OnboardingSwiper from './OnboardingSwiper';
-import LoginScreen from './LoginScreen';
-import HomeScreen from './HomeScreen';
-import CategoriesScreen from './CategoriesScreen ';
-import ACServicesScreen from './ACServicesScreen';
-import ACRegularServicesScreen from './ACRegularServicesScreen';
-import ProfileScreen from './ProfileScreen';
+import React, {useState, useEffect} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import SplashScreen from './screens/SplashScreen';
+import OnboardingSwiper from './screens/OnboardingSwiper';
+import LoginScreen from './screens/LoginScreen';
+import AppNavigator from './navigation/AppNavigator'; // Bottom Tab Navigator
 
 const Stack = createStackNavigator();
 
@@ -24,22 +20,16 @@ const App = () => {
   }, []);
 
   if (isSplashVisible) {
-    return <SplashScreen />;
+    return <SplashScreen />; // Show splash screen for 3 seconds
   }
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {/* Onboarding Screen */}
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        {/* Conditional Screens */}
         <Stack.Screen name="Onboarding" component={OnboardingSwiper} />
-        {/* Login Screen */}
         <Stack.Screen name="Login" component={LoginScreen} />
-        {/* Home Screen */}
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="CategoriesScreen" component={CategoriesScreen} />
-        <Stack.Screen name="ACServicesScreen" component={ACServicesScreen} />
-        <Stack.Screen name="ACRegularServices" component={ACRegularServicesScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="MainApp" component={AppNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );

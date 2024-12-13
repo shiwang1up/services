@@ -10,7 +10,7 @@ const SplashScreen = () => {
     >
       <View style={styles.logoContainer}>
         <Image
-          source={require('./assets/logo.png')} // Replace with your logo path
+          source={require('../assets/logo.png')} // Replace with your logo path
           style={styles.logo}
         />
         <Text style={styles.text}>mHome Services</Text>

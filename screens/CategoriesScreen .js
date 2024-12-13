@@ -52,11 +52,6 @@ const CategoriesScreen = ({navigation}) => {
         )}
         contentContainerStyle={styles.grid}
       />
-      {/* <TouchableOpacity
-        style={styles.backButton}
-        onPress={() => navigation.goBack()}>
-        <Text style={styles.backButtonText}>Back</Text>
-      </TouchableOpacity> */}
     </View>
   );
 };

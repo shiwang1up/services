@@ -14,15 +14,15 @@ const {width: screenWidth} = Dimensions.get('window');
 const data = [
   {
     title: 'We Provide Professional Home services',
-    image: require('./assets/service1.png'),
+    image: require('../assets/service1.png'),
   },
   {
     title: 'Easy Service booking & Scheduling',
-    image: require('./assets/service2.png'),
+    image: require('../assets/service2.png'),
   },
   {
     title: 'Get Personal Grooming at Home',
-    image: require('./assets/service3.png'),
+    image: require('../assets/service3.png'),
   },
 ];
 
