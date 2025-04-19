@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-const ServiceDetails = ({navigation}gi) => {
+const ServiceDetails = ({navigation}) => {
   // State for dynamic data
   const [selectedService, setSelectedService] = useState(null);
   const [relatedServices, setRelatedServices] = useState([]);
